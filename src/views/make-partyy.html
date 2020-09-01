@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt_br"> <!-- lang é um atributo -->
+<html lang="pt_br">
 <head>
-    <meta charset="UTF-8"> <!-- configuração de charset -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partyy | Sua Plataforma de Festas</title>
 
+    <!-- Definição das folhas de estilo -->
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/partials/header.css">
     <link rel="stylesheet" href="/styles/partials/forms.css">
     <link rel="stylesheet" href="/styles/partials/page-make-partyys.css">
+
+    <!-- Fonte utilizada pelo site -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Script para adicionar mais opções de horários -->
     <script src="/scripts/addField.js" defer></script>
 </head>
 <body id="page-make-partyys">
-    <div id="container">
-        <header class="page-header">
+    <div id="container"> <!-- Container principal -->
+        <header class="page-header"> <!-- Cabeçalho -->
             <div class="top-bar-container">
                 <a class="left-arrow" href="/">
-                    <img src="/images/icons/left-arrow.png" alt="Voltar">
+                    <img src="/images/icons/left-arrow.png" alt="Voltar"> <!-- Seta de retorno ao inicio -->
                 </a>                    
                     <img src="/images/logo.svg" alt="Proffy"> <!-- Criar logo do projeto -->
             </div>
@@ -27,7 +31,7 @@
             </div>
         </header>
         <main>
-            <form action="" id="create-new-partyy">
+            <form action="" id="create-new-partyy"> <!-- Formulario para criação de partyys-->
                 <fieldset>
                     <Legend>Seus dados</Legend>
                     <div class="input-block">
@@ -46,10 +50,6 @@
                         <label for="email">Email</label>
                         <input name="email" id="email" type="email" required>
                     </div>
-                    <!--<div class="textarea-block">
-                        <label for="bio">Email</label>
-                        <textarea name="bio" id="bio" required></textarea> Não pode haver quebra de linha nessa tag para que o cursor funcione
-                    </div> -->             
                 </fieldset>
                 <fieldset>
                     <legend>Sobre a Festa</legend>
@@ -70,21 +70,15 @@
                         <label for="number">Numero</label>
                         <input name="number" id="number" type="number" required>
                     </div>
+
                     <div class="input-block">
                         <label for="cost">Preço entrada R$<small>(opcional)</small></label>
-                        <input name="cost" id="cost"></input>
+                        <input name="cost" id="cost" type="number">
                     </div> 
                     <div class="textarea-block">
                         <label for="description">Descrição</label>
                         <textarea name="description" id="description" required></textarea>
                     </div>
-                    
-                    <!--<div class="input-block">
-                        <label for="cost">Custo da sua hora/aula
-                            <small>(R$)</small>
-                        </label>
-                        <input name="cost" id="cost" type="number" required>
-                    </div> -->
                 </fieldset>
                 <fieldset id="schedule-items">
                     <legend>Horário(s) em que a festa vai rolar
@@ -111,8 +105,8 @@
                         </div>
                     </div>
                 </fieldset>
-            </form>
-            <footer>
+            </form> <!-- Fim do formulário-->
+            <footer> <!-- Rodapé -->
                 <p>
                     <img src="/images/icons/warning.svg" alt="Aviso importante">
                     Importante ! <br> Preenha todos os dados obrigatórios
