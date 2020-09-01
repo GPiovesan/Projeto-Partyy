@@ -1,19 +1,10 @@
-/*
-    Cascading
-    Em cascata
-
-    StyleSheet
-    Folha de estilos
-*/
 :root { 
-    /* Utilizando variáveis no css */
+    /*
     --color-background: #f0f0f7;
-    --color-primary-lighter: #9871F5;
     --color-primary-light: #916BEA;
     --color-primary: #8257E5;
     --color-primary-dark: #774dd6;
     --color-primary-darker: #6842c2;
-    --color-secondary: #04D361;
     --color-secondary-dark: #04BF58;
     --color-title-in-primary: #FFFFFF;
     --color-text-in-primary: #D4C2FF;
@@ -22,12 +13,21 @@
     --color-text-base: #6A6180;
     --color-line-in-white: #E6E6F0;
     --color-input-background: #F8F8FC;
-    --color-button-text: #FFFFFF;
-    --color-box-base: #FFFFFF;
+    --color-button-text: #FFFFFF;    
     --color-box-footer: #FAFAFC;
-    --color-small-info: #C1BCCC;
+    --color-small-info: #C1BCCC;*/
     /*  Tamanho da fonte padrão: 10px - 100% - 1rem */
     font-size: 60%; /* Controles das medidas rem */
+
+    --color-background: #2B2D42;
+    --color-primary: #2B2D42;
+    --color-primary-lighter: #8D99AE;
+    --color-secondary-white: #ffffff;
+    --color-secondary-light: #8D99AE;
+    --color-secondary-lighter: #EDF2F4;        
+    --color-third: #D90429;
+    --color-third-lighter: #EF233C;
+    --color-text: #000000;
 }
 
 * {
@@ -42,7 +42,7 @@ body {
 }
 
 body {
-    background: var(--color-background);
+    background: var(--color-secondary-lighter);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,9 +53,9 @@ input,
 button,
 textarea {
     /* font: 500 1.6rem Poppins; */
-    font-weight: 500;
-    font-family: Poppins;
-    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: 'Roboto';
+    font-size: 2.6rem;
     color: var(--color-text-base);
 }
 

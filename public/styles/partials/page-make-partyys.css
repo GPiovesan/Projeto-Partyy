@@ -1,0 +1,161 @@
+#page-make-partyys #container {
+    width: 100vw;
+    height: 100vh;
+}
+
+#page-make-partyys .page-header .header-content { 
+    margin-bottom: 6.4rem;
+}
+
+#page-make-partyys main {
+     background: var(--color-secondary-white);
+     width: 100%;
+     max-width: 74rem;
+     border-radius: 0.8rem;
+     margin: -3.2rem auto 3.2rem;
+     padding-top: 6.4rem;
+}
+
+#page-make-partyys fieldset {
+    border: none;
+    padding: 0 2.4rem;
+}
+
+#page-make-partyys fieldset legend {
+    font: 700 2.4rem 'Roboto';
+    color: var(--color-text);
+    margin-bottom: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--color-text);
+}
+
+#page-make-partyys fieldset legend button {
+    background: none;
+    border: 0;
+
+    color: var(--color-text);
+    font: 700 1.6rem 'Roboto', sans-serif;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#page-make-partyys fieldset legend button:hover {
+    transform: translateY(-5px);
+    color: var(--color-primary);
+}
+
+#page-make-partyys fieldset+fieldset {
+    margin-top: 6.4rem;
+}
+
+#page-make-partyys .input-block+.input-block,
+#page-make-partyys .input-block+.textarea-block,
+#page-make-partyys .select-block+.input-block  {
+    margin-top: 2.4rem;
+}
+
+#page-make-partyys main footer {
+    padding: 4rem 2.4rem;
+    background: var(--color-secondary-white);
+    border-top: 1px solid var(--color-secondary-lighter);
+    margin-top: 6.4rem;
+}
+
+#page-make-partyys main footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    color: var(--color-third-lighter);
+}
+
+#page-make-partyys main footer p img {
+    margin-right: 2rem;
+}
+
+#page-make-partyys main footer button {
+    width: 100%;
+    height: 5.6rem;
+    background: var(--color-third);
+    color: var(--color-secondary-white);
+    border: 0;
+    border-radius: .8rem;
+    cursor: pointer;
+    font: 700 1.6rem 'Roboto', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+    margin-top: 3.2rem;
+}
+
+#page-make-partyys main footer button:hover {
+    background: var(--color-third-lighter);
+}
+
+.schedule-item+.schedule-item {
+    margin-top: 3.2rem;
+    padding-top: 3.2rem;
+
+    border-top: 1px solid var(--color-text);
+}
+
+.left-arrow img {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 3.6rem;
+}
+
+footer p img {
+    margin-left: 1rem;    
+    width: 3.6rem;    
+}
+
+@media (min-width: 700px) {
+    #page-make-partyys #container{
+        max-width: 100vw;
+    }
+
+    #page-make-partyys .page-header .header-content {
+        margin-bottom: 0;
+    }
+
+    #page-make-partyys main fieldset {
+        padding: 0 64px;
+    }
+
+    .schedule-item {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        column-gap: 1.6rem;        
+    }
+
+    #page-make-partyys #schedule-items .select-block+.input-block,
+    #page-make-partyys #schedule-items .input-block+.input-block {
+        margin-top: 0;
+    }
+
+    #page-make-partyys main footer {
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #page-make-partyys main footer button {
+        margin-top: 0;
+
+        width: 200px;
+    }
+}
