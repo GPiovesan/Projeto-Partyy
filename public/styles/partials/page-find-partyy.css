@@ -1,45 +1,45 @@
-#page-study #container {
+#page-partyys #container {
     width: 100vw;
     height: 100vh;
 }
 
-#search-teachers {
+#search-partyys {
     margin-top:3.2rem;
 }
 
-#search-teachers label {
-    color: var(--color-text-in-primary);
+#search-partyys label {
+    color: var(--color-secondary-lighter);
 }
 
-#search-teachers .select-block {
+#search-partyys .select-block {
     margin-bottom: 1.4rem;
 }
 
-#search-teachers button {
+#search-partyys button {
     width:  100%;
     height: 5.6rem;
-    background: var(--color-secondary);
-    color: var(--color-button-text);
+    background: var(--color-third);
+    color: var(--color-secondary-white);
     border: 0;
     border-radius: 0.8rem;
     cursor: pointer;
-    font: 700 1.6rem Archivo;
+    font: 400 2.4rem 'Roboto';
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     transition: background 0.2s;
-    margin-top: 3.2rem;
+    margin-top: 4rem;
+    letter-spacing: 0.1rem;
 }
 
-#search-teachers button:hover {
-    background-color: var(--color-secondary-dark);
+#search-partyys button:hover {
+    background-color: var(--color-third-lighter);
 }
 
 .select-block label,
 .input-block label {
-    font-size: 1.4rem;
-    color: var(--color-text-complement);
+    font-size: 1.8rem;
 }
 
 .input-block input,
@@ -48,15 +48,21 @@
     height: 5.6rem;
     margin-top: 0.8rem;
     border-radius: 0.8rem;
-    background: var(--color-input-background);
+    background: var(--color-secondary-white);
     border: 1px solid var(--color-line-in-white);
     outline: 0;
     padding: 0 1.6rem;
-    font: 1.6rem Archivo;
+    font: 400 1.6rem 'Roboto';
 }
 
 .input-block {
     position: relative;
+}
+
+.left-arrow img {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 3.6rem;
 }
 
 .input-block:focus-within::after {
@@ -69,83 +75,83 @@
     bottom: 0;
 }
 
-#page-study main {
+#page-partyys main {
     margin: 3.2rem auto;
     width: 90%;
 }
 
-.teacher-item {
-    background-color: var(--color-box-base);
-    border: 1px solid var(--color-line-in-white);
+.partyy-item {
+    background-color: var(--color-secondary-white);
+    border: 1px solid var(--color-secondary-lighter);
     border-radius: 0.8rem;
     margin-top: 2.4rem;
 }
 
-.teacher-item header {
+.partyy-item header {
     padding: 3.2rem 2rem;
     display: flex;
     align-items: center;
 }
 
-.teacher-item header img {
+.partyy-item header img {
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
 }
 
-.teacher-item header div {
+.partyy-item header div {
     margin-left: 2.4rem;
 }
 
-.teacher-item header div strong {
-    font: 700 2.4rem Archivo;
+.partyy-item header div strong {
+    font: 700 2.4rem 'Roboto';
     display: block; /* Necessário para que o SPAN vá para baixo e possa aplicar o MARGIN-TOP */
-    color: var(--color-text-title);
+    color: var(--color-text);
 }
 
-.teacher-item header div span {
+.partyy-item header div span {
     font-size: 1.6rem;
     display: block; /* Necessário para que o SPAN vá para baixo e possa aplicar o MARGIN-TOP */
     margin-top: 0.4rem;
 }
 
-.teacher-item > p {
+.partyy-item > p {
     padding: 0 2rem;
     font-size: 1.6rem;
     line-height: 2.8rem;    
 }
 
-.teacher-item footer {
+.partyy-item footer {
     padding: 3.2rem 2rem;
-    background-color: var(--color-box-footer);
-    border-top: 1px solid var(--color-line-in-white);
+    background-color: var(--color-secondary-lighter);
+    border-top: 1px solid var(--color-secondary-light);
     margin-top: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.teacher-item footer p {
+.partyy-item footer p {
     font-size: 1.4rem;
     line-height: 2.4rem;
-    color: var(--color-text-complement);
+    color: var(--color-text);
 }
 
-.teacher-item footer p strong{
+.partyy-item footer p strong{
     font-size: 1.6rem;
-    color: var(--color-primary);
+    color: var(--color-third);
     display: block;
 }
 
-.teacher-item footer .button {
+.partyy-item footer .button {
     width: 20rem;
     height: 5.6rem;
-    background: var(--color-secondary);
-    color: var(--color-button-text);
+    background: var(--color-third);
+    color: var(--color-secondary-white);
     border: 0;
     border-radius: 0.8rem;
     cursor: pointer;
-    font: 700 1.4rem Archivo;
+    font: 700 1.4rem 'Roboto';
 
     display: flex;
     align-items: center;
@@ -157,12 +163,12 @@
     margin-left: 1.6rem;
 }
 
-.teacher-item footer button:hover {
-    background: var(--color-secondary-dark);
+.partyy-item footer .button:hover {
+    background-color: var(--color-third-lighter);
 }
 
 @media (min-width:700px) {
-    #page-study #container {
+    #page-partyys #container {
         max-width: 100vw;
     }
 
@@ -187,15 +193,15 @@
     }
 
     .page-header .header-content strong {
-        max-width: 350px;
+        max-width: 100%;
     }
 
-    .teacher-item header,
-    .teacher-item footer {
+    .partyy-item header,
+    .partyy-item footer {
         padding: 32px;
     }
 
-    #search-teachers {
+    #search-partyys {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 16px;
@@ -203,32 +209,32 @@
         bottom: -28px;
     }
 
-    #page-study main {
+    #page-partyys main {
         padding: 32px 0;
         max-width: 740px;
         margin: 0 auto;
     }
 
-    #search-teachers .select-block {
+    #search-partyys .select-block {
         margin-bottom: 0;
     }
 
-    .teacher-item > p {
+    .partyy-item > p {
         padding: 0 32px;
     }
 
-    .teacher-item footer p strong {
+    .partyy-item footer p strong {
         display: initial;
         margin-left: 16px;
     }
 
-    .teacher-item footer button {
+    .partyy-item footer button {
         width: 245px;
         font-size: 16px;
         justify-content: center;        
     }
 
-    .teacher-item footer button img {
+    .partyy-item footer button img {
         margin-right: 16px;
     }
 }

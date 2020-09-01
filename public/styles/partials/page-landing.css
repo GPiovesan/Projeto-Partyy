@@ -37,7 +37,7 @@ p, h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    font-size: 10rem;
+    font-size: 8rem;
     letter-spacing: 3.2rem;
     color: var(--color-primary-lighter);
     border: 2px solid var(--color-primary-lighter);
@@ -112,13 +112,13 @@ p, h2 {
         grid-template-columns: 2fr 1fr 2fr;
         grid-template-rows: 350px 1fr;
         grid-template-areas: 
-        "proffy image image"
+        "partyy image image"
         "button button texting";
         gap: 60px;
     }
 
     .logo-container {
-        grid-area: proffy; /* Especificando a area do template */
+        grid-area: partyy; /* Especificando a area do template */
         text-align: initial; /* Inicia ao inicio do grid*/
         align-self: center; /* Se ajusta ao centro do grid*/
         margin: 0;
@@ -131,6 +131,7 @@ p, h2 {
     .hero-image {
         grid-area: image;
         height: 350px;
+        font-size: 10rem;
     }
     
     .buttons-container {

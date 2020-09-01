@@ -2,21 +2,21 @@
 const partyys = [
     {
         name_owner: "Gabriel Piovesan", 
-        social_network: "https://https://www.facebook.com/profile.php?id=100000622718757",
-        whatsapp: "12345678909",
-        email: "bieldeluna@gmail.com",
-        thematic: "Rock",
+        whatsapp: "12345678909",        
+        partyy_type: "Rock",
+        partyy_name: "Skina do Rock",
+        partyy_photo: "https://avatars1.githubusercontent.com/u/36250417?s=460&u=ec2f1035d8f51d6fd2ea0c8c07be7941de70cde3&v=4",
         address: "Rua xyz",
         address_number: 1,
         cost: "10",
         description: "Rock'n Roll baby",
-        weekday: [0],
+        weekday: [1],
         time_from: [720],
         time_to: [1220]
     }
 ]
 
-const partyyTypes = [
+const partyy_types = [
     "Eletrônica",
     "Indie",
     "Pagode",
@@ -43,7 +43,7 @@ const weekdays = [
 
 function getSubject(subjectNumber) {
     const arrayPosition = +subjectNumber - 1
-    return partyyTypes[arrayPosition]
+    return partyy_types[arrayPosition]
 }
 
 function pageLanding(req, res) {
@@ -52,7 +52,7 @@ function pageLanding(req, res) {
 
 function pageFindPartyy(req, res) {
     const filters = req.query
-    return res.render("find-partyy.html", { partyys, filters, partyyTypes, weekdays })
+    return res.render("find-partyy.html", { partyys, filters, partyy_types, weekdays })
 }
 
 function pageMakePartyy(req, res) {
@@ -67,7 +67,7 @@ function pageMakePartyy(req, res) {
         return res.redirect("/make-partyy")
     }
     // se não, mostrar a pagina
-    return res.render("make-partyy.html", {partyyTypes, weekdays})
+    return res.render("make-partyy.html", {partyy_types, weekdays})
 }
 
 // Servidor

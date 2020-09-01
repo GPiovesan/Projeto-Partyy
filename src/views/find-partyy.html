@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt_br"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partyy | Sua Plataforma de Festase</title>
+    <title>Partyy | Sua Plataforma de Festas</title>
 
     <!-- Definição das folhas de estilo -->
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/partials/header.css">
-    <link rel="stylesheet" href="/styles/partials/page-study.css">
+    <link rel="stylesheet" href="/styles/partials/page-find-partyy.css">
 
-    <!-- Fonte utilizada pelo site -->
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+     <!-- Fonte utilizada pelo site -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
 </head>
-<body id="page-study">
-    <div id="container"> <!-- Container principal -->
-        <header class="page-header"> <!-- Cabeçalho -->
+<body id="page-partyys">
+    <div id="container">
+        <header class="page-header"> <!-- Cabeçalho e pesquisa -->
             <div class="top-bar-container">
-                <a href="/">
-                    <img src="/images/icons/back.svg" alt="Voltar">
+                <a class="left-arrow" href="/">
+                    <img src="/images/icons/left-arrow.png" alt="Voltar">
                 </a>
                     <img src="/images/logo.svg" alt="Proffy">
             </div>
 
             <div class="header-content">
-                <strong>Esses são os Proffys disponíveis</strong>
-                <form id="search-teachers">
+                <strong>Estas são as suas Partyys disponíveis :)</strong>
+                <form id="search-partyys">
                     <div class="select-block">
-                        <label for="subject">Matéria</label>
-                        <select name="subject" id="subject">
+                        <label for="partyy_type">Temática</label>
+                        <select name="partyy_type" id="partyy_type">
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
-                            {%for subject in subjects%}
-                                <option value="{{loop.index}}" {{ "selected" if filters.subject == loop.index }}>{{subject}}</option>
+                            {%for partyy_type in partyy_types%}
+                                <option value="{{loop.index}}" {{ "selected" if filters.partyy_type == loop.index }}>{{partyy_type}}</option>
                             {%endfor%}
                         </select>
                     </div>
@@ -54,23 +55,25 @@
         </header>
 
         <main>            
-            {%for proffy in proffys %}
+            {%for partyy in partyys %}
 
-            <article class="teacher-item">
+            <article class="partyy-item">
                 <header>
                     <img 
-                        src="{{proffy.avatar}}"
-                        alt="{{proffy.name}}">
+                        src="{{partyy.partyy_photo}}"
+                        alt="{{partyy.partyy_name}}">
                     <div>
-                        <strong>{{proffy.name}}</strong>
-                        <span>{{proffy.subject}}</span>
-                    </div>
+                        <strong>{{partyy.partyy_name}}</strong>
+                        <span>{{partyy.partyy_type}}</span>
+                        <span>Dia: {{partyy.weekday}}, Das: {{partyy.time_from}}, Até: {{partyy.time_to}}</span>
+                    </div>                    
                 </header>
-            
-                <p>{{proffy.bio}}</p>
-            
+                
+                <p>Anunciado por: {{partyy.name_owner}}</p>
+                <p>Endereço: {{partyy.address}} {{partyy.address_number}}</p>
+                <p>{{partyy.description}}</p>                            
                 <footer>
-                    <p>Preço/hora<strong>R$ {{proffy.cost}}</strong>
+                    <p>Preço:<strong>R$ {{partyy.cost}}</strong>
                     </p>
                     <a href="https://api.whatsapp.com/send?l=pt_BR&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}" class="button" target="_blank">
                         <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato

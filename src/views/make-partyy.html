@@ -26,7 +26,7 @@
                     <img src="/images/logo.svg" alt="Proffy"> <!-- Criar logo do projeto -->
             </div>
             <div class="header-content">
-                <strong>Que incrível que você quer dar uma festa!</strong>
+                <strong>Que incrível,<br> você quer dar uma festa!</strong>
                 <p>O primeiro passo, é preencher este formulário de inscrição.</p>                
             </div>
         </header>
@@ -35,40 +35,41 @@
                 <fieldset>
                     <Legend>Seus dados</Legend>
                     <div class="input-block">
-                        <label for="name">Nome completo</label>
-                        <input name="name" id="name" required>
-                    </div>
-                    <div class="input-block">
-                        <label for="social-media">Link de sua rede social favorita<small>(comece com https://)</small></label>
-                        <input name="social-media" id="social-media" type="url" required>
-                    </div>
+                        <label for="name_owner">Nome completo</label>
+                        <input name="name_owner" id="name_owner" required>
+                    </div>                    
                     <div class="input-block">
                         <label for="whatsapp">Whatsapp <small>(somente números)</small></label>
                         <input name="whatsapp" id="whatsapp" type="tel" required>
-                    </div>
-                    <div class="input-block">
-                        <label for="email">Email</label>
-                        <input name="email" id="email" type="email" required>
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Sobre a Festa</legend>
                     <div class="select-block">
-                        <label for="partyyType">Temática</label>
-                        <select name ="partyyType[]" id="partyyType" required>
+                        <label for="partyy_type">Temática</label>
+                        <select name ="partyy_type[]" id="partyy_type" required>
                             <option value="">Selecione uma opção</option>
-                            {%for partyyType in partyyTypes%}
-                                <option value="{{loop.index}}">{{partyyType}}</option>
+                            {%for partyy_type in partyy_types%}
+                                <option value="{{loop.index}}">{{partyy_type}}</option>
                             {%endfor%}
                         </select>
                     </div>
+
+                    <div class="input-block">
+                        <label for="partyy_name">Nome da Partyy</label>
+                        <input name="partyy_name" id="partyy_name" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="partyy_photo">Link de uma foto sobre a Partyy<small>(comece com https://)</small></label>
+                        <input name="partyy_photo" id="partyy_photo" type="url" required>
+                    </div>                    
                     <div class="input-block">
                         <label for="address">Endereço</label>
                         <input name="address" id="address" type="text" required>
                     </div>
                     <div class="input-block">
-                        <label for="number">Numero</label>
-                        <input name="number" id="number" type="number" required>
+                        <label for="address_number">Numero</label>
+                        <input name="address_number" id="address_number" type="number" required>
                     </div>
 
                     <div class="input-block">
