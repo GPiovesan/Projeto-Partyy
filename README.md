@@ -5,6 +5,7 @@
 > Utilizando:
 > - HTML
 > - CSS
+> - Design Responsivo
 > - JavaScript
 > - Node.js
 
