@@ -1,7 +1,8 @@
 const express = require("express");
-
 const app = express();
+const path = require('path');
+const router = express.Router();
 
-app.get('/',function(req,res) {
-    res.sendFile('src/views/index.html');
-  });
+router.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+})
