@@ -2,7 +2,7 @@
   "name": "Partyy",
   "scripts": {
     "watch": "nodemon src/server.js",
-    "start": "index.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
