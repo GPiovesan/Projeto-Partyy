@@ -1,22 +1,20 @@
-const koa = require('koa');
-const server = new koa();
+var PORT = process.env.PORT || 5000;
+var express = require('express');
+var app = express();
 
-const static = require('koa-static');
+var http = require('http');
+var server = http.Server(app);
 
-const Router = require('koa-router');
-const route = new Router();
+app.use(express.static('client'));
 
-const views = require('koa-views');
-
-route.get('/', (ctx, next) => {
-  return ctx.render('./index.html', {
-    name: 'Alex'
-  })
+server.listen(PORT, function() {
+  console.log('Chat server running');
 });
 
-server.use(views('./views', {map: {html: 'nunjucks'}}));
-server.use(route.routes());
-server.use(static('./public'));
+var io = require('socket.io')(server);
 
-
-server.listen(1985);
+io.on('connection', function(socket) {
+  socket.on('message', function(msg) {
+    io.emit('message', msg);
+  });
+});
