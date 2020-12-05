@@ -1,8 +1,9 @@
-const express = require("express");
-const app = express();
-const path = require('path');
-const router = express.Router();
+const express = require('express')
+const server = express()
 
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/index.html'));
-})
+server
+.use(express.static("public"))
+.get("/", pageLanding)
+.get("/find-partyy",pageFindPartyy)
+.get("/make-partyy", pageMakePartyy)
+.listen(process.env.PORT)
