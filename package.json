@@ -1,5 +1,6 @@
 {
   "name": "Partyy",
+  "main": "index.js",
   "scripts": {
     "watch": "nodemon src/server.js",
     "start": "node src/index.js"
