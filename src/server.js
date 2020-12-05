@@ -81,7 +81,6 @@ nunjucks.configure('src/views', {
     noCache: true,
 })
 
-
 /// Inicio e configuração do servidor
 server
 // configurar arquivos estaticos (css, scripts, imagens)
@@ -91,4 +90,4 @@ server
 .get("/find-partyy",pageFindPartyy)
 .get("/make-partyy", pageMakePartyy)
 // start do servidor
-.listen(5500)
+.listen(process.env.PORT)
